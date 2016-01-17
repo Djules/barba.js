@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>Page1</title>
+    <link rel="stylesheet" href="../node_modules/mocha/mocha.css" />
+
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai/chai.js"></script>
+    <script src="../dist/barba.js"></script>
+  </head>
+  <body>
+    <main id="barba-wrapper">
+      <div class="barba-container" data-namespace="page1">
+        <a href="testpage.html" id="testlink">Test</a>
+      </div>
+    </main>
+
+    <div id="mocha"></div>
+
+    <script>
+      mocha.ui('bdd');
+      mocha.reporter('html');
+      var expect = chai.expect;
+    </script>
+    <script src="tests.js"></script>
+    <script>
+      mocha.run();
+      //mochaPhantomJS.run();
+    </script>
+  </body>
+</html>
