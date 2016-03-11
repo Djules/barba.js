@@ -235,9 +235,9 @@ var Pjax = {
       return false;
 
     var newContainer = this.load(newUrl);
-    var transition = Object.create(this.getTransition());
-
     this.History.add(newUrl);
+
+    var transition = Object.create(this.getTransition());
     this.transitionProgress = true;
 
     Dispatcher.trigger('initStateChange',
